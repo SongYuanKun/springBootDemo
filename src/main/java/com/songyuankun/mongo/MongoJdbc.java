@@ -20,7 +20,7 @@ import java.util.List;
 @PropertySource(value = "classpath:mongodb.properties")
 public class MongoJdbc {
     @Value("${mongo.repset}")
-    private String repset;
+    private String host;
     /**
      * 数据库信息
      */
@@ -50,7 +50,7 @@ public class MongoJdbc {
     @Bean
     public MongoDatabase mongoDatabase() {
         List<ServerAddress> serverAddressList = new ArrayList<>();
-        if (this.repset == null || "".equals(this.repset)) {
+        if (this.host == null || "".equals(this.host)) {
             throw new MongodbException("未配置ip地址和端口号！");
         }
         if (this.connectionsPerHost == null || "".equals(this.connectionsPerHost)) {
@@ -68,7 +68,7 @@ public class MongoJdbc {
         if (this.database == null || "".equals(this.database)) {
             throw new MongodbException("未配置库名！");
         }
-        String[] hostPorts = this.repset.split(",");
+        String[] hostPorts = this.host.split(",");
         for (String hostPort : hostPorts) {
             String[] hostPortArr = hostPort.split(":");
             if (hostPortArr.length != 2) {

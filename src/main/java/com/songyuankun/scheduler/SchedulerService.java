@@ -17,6 +17,8 @@ public class SchedulerService {
     @Scheduled(fixedRate = 5000)
     public void reportCurrentTime() {
         log.info("每5秒执行,当前时间:" + LocalDateTime.now());
+
+
     }
 
     @Scheduled(cron = "0 08 17 ? * *")

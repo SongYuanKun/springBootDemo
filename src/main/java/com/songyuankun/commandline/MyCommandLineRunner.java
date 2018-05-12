@@ -1,5 +1,6 @@
 package com.songyuankun.commandline;
 
+import com.songyuankun.async.AsyncTaskService;
 import com.songyuankun.entity.User;
 import com.songyuankun.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -16,10 +17,13 @@ import java.util.List;
 @Slf4j
 public class MyCommandLineRunner implements CommandLineRunner {
 
+    private final AsyncTaskService asyncTaskService;
+
     private final UserRepository userRepository;
 
     @Autowired
-    public MyCommandLineRunner(UserRepository userRepository) {
+    public MyCommandLineRunner(AsyncTaskService asyncTaskService, UserRepository userRepository) {
+        this.asyncTaskService = asyncTaskService;
         this.userRepository = userRepository;
     }
 
@@ -33,5 +37,8 @@ public class MyCommandLineRunner implements CommandLineRunner {
         userRepository.deleteById(saveUser.getId());
         List<User> userList = userRepository.findByName("songyuankun");
         log.info("name:" + userList);
+
+        asyncTaskService.executeAsyncTask(1);
+        asyncTaskService.executeAsyncTask(2);
     }
 }
