@@ -21,6 +21,7 @@
 ###@PropertySource  读取配置文件
 
 ###@Bean    注解实例
+###@Scheduled    定时任务注解
 
 
 
@@ -33,4 +34,18 @@
 第四种是在classpath下直接放配置文件。
 
 这四种方式的优先级是从一到四依次降低的。
+
+
+##项目部署
+   ###简单部署
+   使用`java -jar ***.jar`即可启动该项目
+   ###高级部署1
+   本项目支持外部配置数据库，
+   使用命令行<br/>
+`java -jar demo.jar --spring.config.location=**.properties`<br/>
+   其中文件名随便定义，无固定要求。<br/>
+   ###高级部署2
+   本项目支持多环境部署，application-dev.properties文件或application-prod.properties中配置数据库连接信息。<br/>
+   启动命令<br/>`java -jar ***.jar --spring.profiles.active=prod`<br/>或<br/>
+   `java -jar ***.jar --spring.profiles.active=dev`<br/>
 

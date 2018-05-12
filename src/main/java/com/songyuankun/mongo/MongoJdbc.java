@@ -11,14 +11,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
  * @author Administrator
  */
 @Configuration
-@PropertySource(value = "classpath*:mongodb.properties")
+@PropertySource(value = "classpath:mongodb.properties")
 public class MongoJdbc {
     @Value("${mongo.repset}")
     private String repset;
@@ -50,7 +49,7 @@ public class MongoJdbc {
 
     @Bean
     public MongoDatabase mongoDatabase() {
-        List<ServerAddress> serverAddressList = new ArrayList<ServerAddress>();
+        List<ServerAddress> serverAddressList = new ArrayList<>();
         if (this.repset == null || "".equals(this.repset)) {
             throw new MongodbException("未配置ip地址和端口号！");
         }
@@ -84,7 +83,7 @@ public class MongoJdbc {
                 .threadsAllowedToBlockForConnectionMultiplier(Integer.parseInt(this.threadsAllowedToBlockForConnectionMultiplier)).build();
         MongoCredential credential = MongoCredential.createCredential(this.user, this.database, this.password.toCharArray());
         /* 客户端连接池 */
-        MongoClient mongoClient = new MongoClient(serverAddressList, Collections.singletonList(credential), mongoClientOptions);
+        MongoClient mongoClient = new MongoClient(serverAddressList, credential, mongoClientOptions);
         return mongoClient.getDatabase(database);
     }
 }

@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://songyuankun:songyuankun@demo-6zzom.mongodb.net/demo
+  datasource:
+    url: jdbc:mysql://mysqltest.c2avtn25k49m.us-east-2.rds.amazonaws.com/mysqltest?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: songyuankun
+    password: songyuankun
+    driver-class-name: com.mysql.jdbc.Driver
+
