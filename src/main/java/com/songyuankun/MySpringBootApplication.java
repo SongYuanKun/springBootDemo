@@ -16,10 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-//自动加载配置文件
-@EnableAutoConfiguration
-//自动扫描注解
-@ComponentScan
 //定时任务
 @EnableScheduling
 
