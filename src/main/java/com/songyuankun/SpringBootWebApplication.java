@@ -11,8 +11,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  *
  * @author SongYuanKun
  */
-//自动加载配置文件
-@EnableAutoConfiguration
 
 @SpringBootApplication
 public class SpringBootWebApplication extends SpringBootServletInitializer {
