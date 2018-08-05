@@ -21,7 +21,6 @@ public class SpringBootWebApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        System.out.println(123);
         return application.sources(SpringBootWebApplication.class);
     }
 }
