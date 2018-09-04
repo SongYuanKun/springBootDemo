@@ -22,11 +22,11 @@
 
 #IDE Files #
 target
+.idea
 .classpath
 .project
 .settings
 .project
-.idea
 rebel.xml
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
