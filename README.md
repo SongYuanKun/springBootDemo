@@ -45,7 +45,7 @@ http://localhost:8080/actuator
    ###高级部署1
    本项目支持外部配置数据库，
    使用命令行<br/>
-`java -jar demo.jar --spring.config.location=**.properties`<br/>
+`java -jar demo.jar --spring.com.songyuankun.config.location=**.properties`<br/>
    其中文件名随便定义，无固定要求。<br/>
    ###高级部署2
    本项目支持多环境部署，application-dev.properties文件或application-prod.properties中配置数据库连接信息。<br/>

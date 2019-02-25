@@ -12,7 +12,7 @@ import java.util.List;
 public interface UserRepository extends MongoRepository<User, String> {
 
 
-    @Query(value = "{ 'name':{$regex:?0,$options:'i'}}")
+    @Query(value = "{ 'name':?0}")
 
     /**
      * 使用自定义注解来实现复杂查询
