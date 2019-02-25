@@ -28,7 +28,6 @@ public class ApiController {
     @ApiOperation(value = "按姓名获取用户列表", notes = "获取所有用户信息")
     @RequestMapping(value = "list/{name}", produces = "application/json")
     public List<User> returnJson(@PathVariable("name") String name) {
-        List<User> byName = userRepository.findByName(name);
-        return byName;
+        return userRepository.findByName(name);
     }
 }
