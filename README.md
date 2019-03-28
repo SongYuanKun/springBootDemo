@@ -54,4 +54,6 @@ http://localhost:8080/actuator
 
 
 
-123123123
+## swagger-ui
+访问地址`/swagger-ui.html`<br/>
+需要在`MyWebAppConfigurer.java`中增加swagger静态文件的访问权限，然后在`SwaggerConfig.java`中配置需要生成的接口
