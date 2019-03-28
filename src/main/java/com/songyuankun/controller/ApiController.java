@@ -16,7 +16,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("api")
-@Api(description = "api测试")
+@Api(description = "api测试", tags = "api测试")
 public class ApiController {
     private final UserRepository userRepository;
 
