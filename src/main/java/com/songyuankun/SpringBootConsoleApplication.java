@@ -3,6 +3,7 @@ package com.songyuankun;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
 
 /**
  * 非web程序
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author SongYuanKun
  */
 @SpringBootApplication
+@EnableSpringConfigured
 public class SpringBootConsoleApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
