@@ -21,8 +21,8 @@
 ### @PropertySource  读取配置文件
 
 ### @Bean    注解实例
-### @Scheduled    定时任务注解
 
+### @Scheduled    定时任务注解
 
 ## 配置文件加载顺序
 这里说了四种方式可以把配置文件放到外部的。 
@@ -36,7 +36,6 @@
 ## actuator 服务监控工具
 `/actuator`
 
-
 ## 项目部署
    ### 简单部署
    使用`java -jar ***.jar`即可启动该项目
@@ -49,7 +48,6 @@
    本项目支持多环境部署，application-dev.properties文件或application-prod.properties中配置数据库连接信息。<br/>
    启动命令<br/>`java -jar ***.jar --spring.profiles.active=prod`<br/>或<br/>
    `java -jar ***.jar --spring.profiles.active=dev`<br/>
-
 
 ## swagger-ui
 访问地址`/swagger-ui.html`<br/>

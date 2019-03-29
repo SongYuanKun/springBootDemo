@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-boot-demo
+  cloud:
+    config:
+      uri: http://srping-cloud.songyuankun.top/config-server/
+      profile: dev
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 7002
