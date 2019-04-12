@@ -2,6 +2,7 @@ package com.songyuankun.controller;
 
 import com.songyuankun.entity.LearnResource;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/learn")
 public class LearnResourceController {
-    @RequestMapping
+    @GetMapping
     public ModelAndView index() {
         List<LearnResource> learnList = new ArrayList<>();
         LearnResource bean = new LearnResource("官方参考文档", "Spring Boot Reference Guide", "http://docs.spring.io/spring-boot/docs/1.5.1.RELEASE/reference/htmlsingle/#getting-started-first-application");
