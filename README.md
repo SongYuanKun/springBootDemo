@@ -52,3 +52,7 @@
 ## swagger-ui
 访问地址`/swagger-ui.html`<br/>
 需要在`MyWebAppConfigurer.java`中增加swagger静态文件的访问权限，然后在`SwaggerConfig.java`中配置需要生成的接口
+
+
+## html接口文档输出
+将项目启动，先运行swagger2markup，再运行asciidoctor
