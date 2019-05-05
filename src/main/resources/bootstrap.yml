@@ -12,7 +12,19 @@ spring:
     host: 60.205.221.172
     port: 7000
     password: 123456
+  rabbitmq:
+    host: 60.205.221.172
+    port: 5672
+    username: songyuankun
+    password: songyuankun
+
   cache:
     type: redis
+
 server:
   port: 7002
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
