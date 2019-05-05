@@ -23,6 +23,7 @@
 ### @Bean    注解实例
 
 ### @Scheduled    定时任务注解
+### @RefreshScope   刷新配置文件中的配置（必须配置在使用该属性的类上才可以）
 
 ## 配置文件加载顺序
 这里说了四种方式可以把配置文件放到外部的。 
@@ -52,7 +53,6 @@
 ## swagger-ui
 访问地址`/swagger-ui.html`<br/>
 需要在`MyWebAppConfigurer.java`中增加swagger静态文件的访问权限，然后在`SwaggerConfig.java`中配置需要生成的接口
-
 
 ## html接口文档输出
 将项目启动，先运行swagger2markup，再运行asciidoctor
