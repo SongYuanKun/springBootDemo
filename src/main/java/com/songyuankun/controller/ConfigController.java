@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api")
 public class ConfigController {
 
-    @Value("${from}")
+    @Value("${my.version}")
     private String fromValue;
 
     /**

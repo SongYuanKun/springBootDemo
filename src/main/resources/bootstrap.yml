@@ -21,8 +21,6 @@ spring:
   cache:
     type: redis
 
-server:
-  port: 7002
 management:
   endpoints:
     web:
