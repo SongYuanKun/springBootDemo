@@ -3,7 +3,7 @@ spring:
     name: spring-boot-demo
   cloud:
     config:
-      uri: http://spring-cloud.songyuankun.top/config-server/
+      uri: http://config-server.songyuankun.top
       profile: dev
   main:
     allow-bean-definition-overriding: true
@@ -17,6 +17,7 @@ spring:
     port: 5672
     username: songyuankun
     password: songyuankun
+    virtual-host: config
 
   cache:
     type: redis
