@@ -22,8 +22,3 @@ spring:
   cache:
     type: redis
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
