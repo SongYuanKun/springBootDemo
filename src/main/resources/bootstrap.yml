@@ -1,23 +1,16 @@
 spring:
   application:
     name: spring-boot-demo
-  cloud:
-    config:
-      uri: http://config-server.songyuankun.top
-      profile: dev
   main:
     allow-bean-definition-overriding: true
-  redis:
-    database: 0
-    host: 60.205.221.172
-    port: 7000
-    password: 123456
-  rabbitmq:
-    host: 60.205.221.172
-    port: 5672
-    username: songyuankun
-    password: songyuankun
-    virtual-host: config
+#  redis:
+#    database: 0
+#    host: 60.205.221.172
+#    port: 7000
+#    password: 123456
+  data:
+    mongodb:
+      uri: mongodb://songyuankun:Kun3.1415926@cluster0-xrqrk.mongodb.net/test
 
   cache:
     type: redis
