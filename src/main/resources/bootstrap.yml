@@ -10,7 +10,7 @@ spring:
 #    password: 123456
   data:
     mongodb:
-      uri: mongodb://songyuankun:Kun3.1415926@cluster0-xrqrk.mongodb.net/test
+      uri: mongodb+srv://songyuankun:3.1415926@cluster0.e9slr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
   cache:
     type: redis

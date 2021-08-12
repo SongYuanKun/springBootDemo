@@ -2,7 +2,6 @@ package com.songyuankun;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -34,7 +33,6 @@ public class MySpringBootApplication {
         return "Hello World!";
     }
 
-    @LoadBalanced
     @Bean
     RestTemplate restTemplate() {
         return new RestTemplate();

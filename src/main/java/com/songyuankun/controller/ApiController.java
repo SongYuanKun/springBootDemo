@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +21,6 @@ import java.util.List;
 @RequestMapping("api")
 @Api(tags = "api测试")
 @Slf4j
-@RefreshScope
 public class ApiController {
     private final UserRepository userRepository;
 
